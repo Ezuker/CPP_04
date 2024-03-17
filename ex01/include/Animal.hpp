@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 20:46:51 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/17 15:25:19 by bcarolle         ###   ########.fr       */
+/*   Created: 2024/03/15 20:43:07 by bcarolle          #+#    #+#             */
+/*   Updated: 2024/03/17 15:11:43 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include <iostream>
 
-class Dog : public Animal
+class Animal
 {
     public:
         //Constructor
-        Dog();
-        Dog(const Dog &rhs);
-        virtual ~Dog();
-
-        //Operator
-        Dog  &operator=(const Dog &rhs);
-
+        Animal();
+        Animal(std::string type);
+        Animal(const Animal &rhs);
+        virtual ~Animal();
+    
+        //Operators
+        Animal  &operator=(const Animal &rhs);
+        
         //Public member functions
-        virtual void makeSound() const;
+        virtual void    makeSound() const;
+
+        //Accessors
+        std::string getType() const;
+        void        setType(const std::string type);
+
+    protected:
+        std::string type;
 };

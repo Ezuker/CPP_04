@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 20:46:51 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/17 15:25:19 by bcarolle         ###   ########.fr       */
+/*   Created: 2024/03/17 14:23:07 by bcarolle          #+#    #+#             */
+/*   Updated: 2024/03/17 15:14:53 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include <iostream>
 
-class Dog : public Animal
+class Brain 
 {
     public:
         //Constructor
-        Dog();
-        Dog(const Dog &rhs);
-        virtual ~Dog();
+        Brain();
+        Brain(const Brain &rhs);
+        ~Brain();
+    
+        //Operators
+        Brain  &operator=(const Brain &rhs);
 
-        //Operator
-        Dog  &operator=(const Dog &rhs);
-
-        //Public member functions
-        virtual void makeSound() const;
+    protected:
+        std::string ideas[100];
 };

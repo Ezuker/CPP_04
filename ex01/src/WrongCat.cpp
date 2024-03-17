@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 21:20:23 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/17 15:29:43 by bcarolle         ###   ########.fr       */
+/*   Created: 2024/03/17 14:09:39 by bcarolle          #+#    #+#             */
+/*   Updated: 2024/03/17 15:29:10 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat() : Animal::Animal("Cat")
+WrongCat::WrongCat() : WrongAnimal::WrongAnimal("WrongCat")
 {
-    std::cout << "Constructor Cat" << std::endl;
+    std::cout << "Constructor WrongCat" << std::endl;
 }
 
-Cat::Cat(const Cat &rhs) : Animal::Animal(rhs)
+WrongCat::WrongCat(const WrongCat &rhs) : WrongAnimal::WrongAnimal(rhs)
 {
     *this = rhs;
 }
 
-Cat &Cat::operator=(const Cat &rhs)
+WrongCat &WrongCat::operator=(const WrongCat &rhs)
 {
     *this = rhs;
     return *this;
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-    std::cout << "Destructor Cat" << std::endl;
+    std::cout << "Destructor WrongCat" << std::endl;
 }
 
-void    Cat::makeSound() const
+void    WrongCat::makeSound() const
 {
-    std::cout << "MIAOU" << std::endl;
+    std::cout << "MIAGROUUUUUUU" << std::endl;
 }

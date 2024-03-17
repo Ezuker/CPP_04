@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 20:46:51 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/17 15:25:19 by bcarolle         ###   ########.fr       */
+/*   Created: 2024/03/17 14:32:56 by bcarolle          #+#    #+#             */
+/*   Updated: 2024/03/17 14:36:51 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Brain.hpp"
 
-#include "Animal.hpp"
-
-class Dog : public Animal
+Brain::Brain()
 {
-    public:
-        //Constructor
-        Dog();
-        Dog(const Dog &rhs);
-        virtual ~Dog();
+    std::cout << "Creation of brain" << std::endl;
+}
 
-        //Operator
-        Dog  &operator=(const Dog &rhs);
+Brain::Brain(const Brain &copy)
+{
+    *this = copy;
+}
 
-        //Public member functions
-        virtual void makeSound() const;
-};
+Brain::~Brain()
+{
+    std::cout << "Destruction Brain" << std::endl;
+}
+
+Brain  &Brain::operator=(const Brain &rhs)
+{
+    for (int i = 0; i < 100; i++)
+        this->ideas[i] = rhs.ideas[i];
+    return (*this);
+}

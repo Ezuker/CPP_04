@@ -30,6 +30,7 @@ SRC = \
 	src/main.cpp \
 	src/WrongAnimal.cpp \
 	src/WrongCat.cpp \
+	src/Brain.cpp \
 
 
 INCLUDES = \
@@ -39,7 +40,7 @@ OBJ = $(SRC:%.cpp=$(BUILD_DIR)%.o)
 BUILD_DIR = ./build/
 CC = g++
 CFLAGS = -Wall -Wextra -Werror -g -std=c++98
-NAME = Polymorphism
+NAME = putbrainsinthem
 BOOL_EXEC = 0
 EXEC = ./$(NAME)
 IS_COMPILING = 0
