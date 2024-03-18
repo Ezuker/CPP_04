@@ -24,13 +24,12 @@ _ICYAN=$'\033[46m
 _IWHITE=$'\033[47m
 
 SRC = \
-	src/Animal.cpp \
-	src/Dog.cpp \
-	src/Cat.cpp \
+	src/MateriaSource.cpp \
+	src/Character.cpp \
+	src/Cure.cpp \
+	src/Ice.cpp \
+	src/AMateria.cpp \
 	src/main.cpp \
-	src/WrongAnimal.cpp \
-	src/WrongCat.cpp \
-	src/Brain.cpp \
 
 
 INCLUDES = \
@@ -40,7 +39,7 @@ OBJ = $(SRC:%.cpp=$(BUILD_DIR)%.o)
 BUILD_DIR = ./build/
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -g -std=c++98
-NAME = Abstract_class
+NAME = Recap
 BOOL_EXEC = 0
 EXEC = ./$(NAME)
 IS_COMPILING = 0
