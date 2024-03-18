@@ -30,6 +30,7 @@ SRC = \
 	src/main.cpp \
 	src/WrongAnimal.cpp \
 	src/WrongCat.cpp \
+	src/Brain.cpp \
 
 
 INCLUDES = \
@@ -39,7 +40,7 @@ OBJ = $(SRC:%.cpp=$(BUILD_DIR)%.o)
 BUILD_DIR = ./build/
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -g -std=c++98
-NAME = Polymorphism
+NAME = Abstract_class
 BOOL_EXEC = 0
 EXEC = ./$(NAME)
 IS_COMPILING = 0
