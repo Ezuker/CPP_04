@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 18:21:40 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/18 23:58:53 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/19 00:55:05 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ class Character : public ICharacter
         //Operators
         Character  &operator=(const Character &rhs); //deep copy to do
 
-        //Member function
+        //Accessors
         virtual std::string const   &getName() const;
+        AMateria                    *getInv(int i) const;
+
+        //Member function
         virtual void                equip(AMateria *m);
         virtual void                unequip(int idx);
         virtual void                use(int idx, ICharacter &target);

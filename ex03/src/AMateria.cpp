@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 18:36:15 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/18 23:36:30 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/19 00:33:41 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ void    AMateria::setType(std::string type)
 void    AMateria::use(ICharacter &target)
 {
     (void)target;
-    std::cout << "to do usefuction" << std::endl;
+    std::cout << "does nothing" << std::endl;
 }

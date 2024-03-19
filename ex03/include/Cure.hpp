@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 18:08:03 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/18 23:31:13 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/19 00:34:49 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ class Cure : public AMateria
 
         //Member function
         virtual Cure   *clone() const;
+        virtual void   use(ICharacter &target);
 };

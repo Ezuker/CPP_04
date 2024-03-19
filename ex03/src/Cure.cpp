@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 23:25:49 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/18 23:39:44 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/19 00:35:20 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,9 @@ Cure    *Cure::clone() const
     Cure *clone = new Cure();
     clone->setType(this->_type);
     return (clone);
+}
+
+void    Cure::use(ICharacter &target)
+{
+    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

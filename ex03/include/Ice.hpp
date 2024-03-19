@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 18:08:00 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/18 23:27:00 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/19 00:36:01 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ class Ice : public AMateria
         Ice  &operator=(const Ice &rhs);
 
         //Member function
-        Ice *clone() const;
+        virtual Ice     *clone() const;
+        virtual void    use(ICharacter &target);
 };
